@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+
+    /* Language and Environment */
+    "target": "ESNext",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+
+    /* Modules */
+    "module": "ESNext",                                 /* Specify what module code is generated. */
+    "rootDir": "./",                                   /* Specify the root folder within your source files. */
+    "moduleResolution": "node",                     /* Specify how TypeScript looks up a file from a given module specifier. */
+    "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
+    "paths": {
+      "src/*": ["src/*"],
+      "services/*": ["src/services/*"],
+      "commonComponents/*": ["src/commonComponents/*"],
+      "utils/*": ["src/utils/*"],
+      "pages/*": ["src/pages/*"],
+      "components/*": ["src/components/*"],
+      "common/*": ["src/common/*"],
+      "hooks/*": ["src/hooks/*"],
+      "types/*": ["src/types/*"]
+    },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
+    "outDir": "./dist",                                   /* Specify an output folder for all emitted files. */
+
+    "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+
+    /* Type Checking */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "noImplicitAny": false,
+    "strictNullChecks": true,                         /* When type checking, take into account 'null' and 'undefined'. */
+    "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
+    "noImplicitThis": true,                           /* Enable error reporting when 'this' is given the type 'any'. */
+    "noUnusedLocals": true,                           /* Enable error reporting when local variables aren't read. */
+    "noUnusedParameters": true,                       /* Raise an error when a function parameter isn't read. */
+    "exactOptionalPropertyTypes": true,               /* Interpret optional property types as written, rather than adding 'undefined'. */
+    "skipLibCheck": true,
+    "jsx": "react"
+  },
+  "include": ["src", "public"],
+  "exclude": ["node_modules", "dist"],
+}
