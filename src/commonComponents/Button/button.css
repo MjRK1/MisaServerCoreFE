@@ -1,0 +1,75 @@
+.c-button {
+    display: flex;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+    height: 40px;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+
+/*button.c-button:focus, button.c-button:active, button.c-button:hover {*/
+/*    outline:0;*/
+/*}*/
+
+/*.c-button:not(.c-button--disabled):hover {*/
+/*    opacity: .85;*/
+/*}*/
+.c-button--theme-default {
+    outline: none;
+    background: linear-gradient(0, #9DC9F7FF, #9DC9F7FF);
+    color: var(--color-black3);
+    transition: all .2s ease-in-out;
+}
+.c-button--theme-default:hover {
+    background: var(--color-gradient2);
+    color: var(--color-black3);
+
+}
+
+.c-button--theme-connect {
+    outline: none;
+    background: var(--color-gradient2);
+    color: var(--color-black6);
+}
+
+.c-button--theme-dark {
+    outline: none;
+    background: var(--color-black6);
+    color: var(--color-white);
+    transition: .2s;
+}
+.c-button--theme-dark:hover {
+    background-color: var(--color-black2);
+    color: var(--color-blue1);
+}
+.c-button--size-s {
+    min-width: 125px;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+}
+.c-button--size-m {
+    min-width: 120px;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.c-button--size-l {
+    min-width: 316px;
+    padding-right: 2.6em;
+    padding-left: 2.6em;
+}
+.c-button--disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+.c-button--stretched {
+    width: 100%;
+}

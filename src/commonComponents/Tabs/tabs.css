@@ -1,0 +1,31 @@
+.tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabs-list {
+    display: flex;
+}
+.tab {
+    background: var(--color-black6);
+    font-size: var(--font-size16);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5.1875rem;
+    height: 1.875rem;
+    border-radius: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tab--active {
+    background: var(--color-gradient1);
+    color: var(--color-black6);
+}
+.additional-tab-content {
+
+}

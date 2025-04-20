@@ -1,0 +1,3 @@
+.ant-input-status-error {
+  border-color: var(--color-error) !important;
+}

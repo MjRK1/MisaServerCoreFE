@@ -1,0 +1,6 @@
+.ant-input-status-error {
+  border-color: var(--color-error) !important;
+}
+.ant-input::placeholder {
+  font-family: Montserrat, sans-serif;
+}

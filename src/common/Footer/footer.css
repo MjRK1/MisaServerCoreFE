@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--color-black1);
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: var(--color-ecru);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-links__footer-item {
+    display: flex;
+    margin-bottom: 10px;
+    color: var(--color-ecru);
+}
+.footer-item__item-icon {
+    margin-right: 10px;
+}
