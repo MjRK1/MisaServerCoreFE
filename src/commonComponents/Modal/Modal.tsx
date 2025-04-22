@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Button } from 'commonComponents/Button';
 import { CloseOutlined } from '@ant-design/icons';
+import { IModal } from 'types/commonComponents';
 
 
 export const Modal = (props: IModal) => {
@@ -13,7 +14,7 @@ export const Modal = (props: IModal) => {
     withSuccess,
     successText,
     onClose,
-    onSuccess,
+    onSuccess = undefined,
     children,
   } = props;
 

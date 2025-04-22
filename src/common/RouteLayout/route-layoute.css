@@ -8,6 +8,7 @@
 main {
     padding-top: 2rem;
     padding-left: 3rem;
+    padding-right: 3rem;
     min-height: calc(100vh - 3rem);
 }
 .content {

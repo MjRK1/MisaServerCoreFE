@@ -2,16 +2,16 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding-left: 3rem;
-    padding-right: 3rem;
     border-bottom: 1px solid var(--color-black1);
 }
 
 .header__logo {
+    position: relative;
+    left: 3rem;
     display: flex;
     align-items: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    /*padding-left: 3rem;*/
     user-select: none;
     cursor: pointer;
 }
@@ -32,30 +32,78 @@
     border-radius: 50%;
 }
 
-.header__header-connect-wallet {
+.header__header-navigation {
     display: flex;
     align-items: center;
 }
-.header-connect-wallet__locale {
-    margin-right: 15px;
-    font-size: 1.25rem;
-    width: 20px;
-    height: 22px;
-    color: var(--color-black1);
+
+.header-navigation__navigation-tab {
+    margin-right: 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+}
+.header-navigation__navigation-tab:last-child {
+    margin-right: 0px;
+}
+.navigation-tab__title {
+    color: var(--color-white);
+    font-size: var(--font-size18);
+    font-weight: 500;
     cursor: pointer;
+    margin-bottom: 24px;
+    user-select: none;
+}
+.navigation-tab__title--active {
+    color: var(--color-ecru);
+    font-size: var(--font-size18);
+}
+
+.navigation-tab__active-underline {
+    display: flex;
+    justify-self: center;
+    width: 35px;
+    height: 4px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: var(--color-ecru);
+    box-shadow: 0 0 30px 0 #DCB376FF;
+}
+.navigation-tab__inactive-underline {
+    width: 24px;
+    height: 4px;
+}
+.header__header-user {
+    padding-right: 3rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    min-width: 180px;
+}
+.header-user__header-user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    user-select: none;
+    cursor: pointer;
+    color: var(--color-ecru);
     transition: .2s;
 }
-.header-connect-wallet__locale:hover {
-    color: var(--color-white);
+.header-user__header-user-info:hover {
+    color: var(--color-lion);
 }
-.header-connect-wallet__connect-wallet-btn {
-    width: 188px;
-    height: 35px !important;
-}
-.connect-wallet-btn__icon {
+.header-user-info__icon {
     margin-right: 10px;
+    font-size: var(--font-size20);
 }
-.connect-wallet-btn__title {
-    font-size: var(--font-size16);
-    font-weight: 600;
+.header-user-info__display-name {
+    font-size: var(--font-size18);
+}
+
+.header-user__logout-button {
+    font-size: var(--font-size22);
+    color: var(--color-red);
+    cursor: pointer;
 }

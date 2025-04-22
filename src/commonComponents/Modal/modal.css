@@ -4,7 +4,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,8 @@
     z-index: 20;
 }
 .modal {
-    background-color: var(--color-black4);
+    background-color: var(--color-white);
+    color: var(--color-black4);
     height: fit-content;
     border-radius: 10px;
     z-index: 20;
@@ -48,10 +49,7 @@
     font-size: var(--font-size18);
     width: 18px;
     height: 18px;
-    background-color: var(--color-lion);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
+    color: var(--color-ecru);
     cursor: pointer;
 }
 

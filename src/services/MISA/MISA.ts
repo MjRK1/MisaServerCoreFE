@@ -37,4 +37,21 @@ export class MISA {
       },
     });
   }
+
+  static getModules({token}) {
+    return axios.get(`${MISA_ROOT_URL}/module`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      }
+    });
+  }
+
+  static getModuleImage({token, moduleName}) {
+    return axios.get(`${MISA_ROOT_URL}/module/image/${moduleName}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      responseType: 'blob'
+    });
+  }
 }

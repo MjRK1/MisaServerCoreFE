@@ -1,0 +1,4 @@
+.register-form__error-message {
+    color: var(--color-red);
+    margin-top: 10px;
+}

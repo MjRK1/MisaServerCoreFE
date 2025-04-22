@@ -17,6 +17,8 @@
     "@reduxjs/toolkit": "^2.6.1",
     "antd": "^5.24.6",
     "axios": "^1.8.4",
+    "bcryptjs": "^3.0.2",
+    "classnames": "^2.5.1",
     "dot-env": "^0.0.1",
     "husky": "^9.1.7",
     "motion": "^12.7.4",
