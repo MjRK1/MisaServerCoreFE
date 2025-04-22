@@ -6,7 +6,8 @@
   "scripts": {
     "start": "vite --port 8000",
     "dev": "vite --port 8000",
-    "serve": "serve -s ./dist -p 8000",
+    "serve": "serve -s ./dist -p 8080",
+    "build": "vite build",
     "lint": "eslint .",
     "check": "npm run lint",
     "preview": "vite preview",
