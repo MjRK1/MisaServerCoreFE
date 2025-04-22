@@ -19,7 +19,7 @@ export default defineConfig({
   server: {
     port: 8000
   },
-  base: '/core/',
+  base: '/',
   build: {
     outDir: 'dist',
     assetsInlineLimit: 0,
