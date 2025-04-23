@@ -8,6 +8,8 @@ import { PrivateRoute } from 'common/PrivateRoute';
 import { AuthPage } from 'pages/AuthPage';
 import { ConfigProvider } from 'antd';
 import { HomePage } from 'pages/HomePage';
+import { ModulePage } from 'pages/ModulePage';
+import { ErrorPage } from 'pages/ErrorPage';
 
 function App() {
   return (
@@ -62,12 +64,15 @@ function App() {
           <Routes>
               <Route path="/core" element={<RouteLayout />}>
                 <Route path="/core/auth" element={<AuthPage />} />
+                <Route path="/core/error" element={<ErrorPage />} />
                 <Route element={<PrivateRoute />}>
+                  <Route path="/core/error" element={<ErrorPage />} />
                   <Route path="/core/home" element={<HomePage />} />
                   <Route path="/core/settings" element={"settings"} />
+                  <Route path="/core/modules" element={<ModulePage />} />
                 </Route>
-                <Route path="/core" element={<Navigate to="/core/home" replace />} />
-                <Route path="*" element={<Navigate to="/core/home" replace />} />
+                <Route path="/core" element={<Navigate to="/core/auth" replace />} />
+                <Route path="*" element={<Navigate to="/core/auth" replace />} />
               </Route>
           </Routes>
         </AuthProvider>

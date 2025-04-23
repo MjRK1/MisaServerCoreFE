@@ -2,12 +2,15 @@ import React from 'react';
 import { IModuleCardProps } from 'types/Modules/modules';
 import { ArrowRightOutlined, ToolOutlined } from '@ant-design/icons';
 import cn from 'classnames';
+import { useNavigate } from 'react-router-dom';
 
 
 export const ModuleCard = (props: IModuleCardProps) => {
   const {
     module
   } = props;
+
+  const navigate = useNavigate();
 
   const renderModuleIcon = () => {
     if (module.image) return <img src={module.image} alt="" className="module-card-icon" />;
@@ -27,7 +30,10 @@ export const ModuleCard = (props: IModuleCardProps) => {
             "module-card-footer__indicator--disabled": !module.enabled
           })}
         />
-        <div className="module-card-footer__redirect-button">
+        <div
+          className="module-card-footer__redirect-button"
+          onClick={() => navigate(`/core/modules/${module.name}`)}
+        >
           <div className="module-card-footer__title">Перейти</div>
           <div className="module-card-redirect-button__icon">
             <ArrowRightOutlined />

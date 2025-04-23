@@ -21,10 +21,12 @@ export const AuthPage = () => {
         navigate('/core/home');
       })
       .catch(async (e) => {
-        if (['TokenExpiredError', 'JsonWebTokenError'].includes(e.response.data.name)) {
+        if (e.name === 'AxiosError') {
+          navigate('/core/error');
+        } else if (['TokenExpiredError', 'JsonWebTokenError'].includes(e?.response?.data?.name)) {
           if (refreshAccessToken) await refreshAccessToken(refreshToken);
         } else {
-          navigate('/core/home');
+          navigate('/core/auth');
         }
       });
   }, []);

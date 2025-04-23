@@ -1,0 +1,14 @@
+.error-page {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-page__image img {
+    width: 600px;
+    height: 450px;
+    border-radius: 40px;
+}
+.error-page__info {
+    font-size: 40px;
+    color: var(--color-ecru);
+}
