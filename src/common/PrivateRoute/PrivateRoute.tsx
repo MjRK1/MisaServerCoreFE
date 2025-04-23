@@ -17,11 +17,11 @@ export const PrivateRoute = () => {
         if (['TokenExpiredError', 'JsonWebTokenError'].includes(e.response.data.name)) {
           if (refreshAccessToken) await refreshAccessToken(refreshToken);
         } else {
-          navigate('/core/auth');
+          navigate('/auth');
         }
       });
   }, []);
 
-  if (!accessToken || !refreshToken) return <Navigate to="/core/auth" />;
+  if (!accessToken || !refreshToken) return <Navigate to="/auth" />;
   return <Outlet />;
 };

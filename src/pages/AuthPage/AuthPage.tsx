@@ -18,13 +18,13 @@ export const AuthPage = () => {
       .then((data) => {
         const userData = data.data.user;
         if (setUser) setUser({ ...userData});
-        navigate('/core/home');
+        navigate('/home');
       })
       .catch(async (e) => {
         if (['TokenExpiredError', 'JsonWebTokenError'].includes(e.response.data.name)) {
           if (refreshAccessToken) await refreshAccessToken(refreshToken);
         } else {
-          navigate('/core/home');
+          navigate('/home');
         }
       });
   }, []);
