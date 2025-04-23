@@ -14,22 +14,21 @@ export const Header = () => {
       id: 1,
       name: 'home',
       title: 'Главная',
-      path: '/home'
+      path: '/core/home'
     },
     {
       id: 2,
       name: 'settings',
       title: 'Настройки',
-      path: '/settings'
+      path: '/core/settings'
     },
   ];
-
 
   return (
     <div className="header">
       <div className="header__logo">
         <div className="logo-icon">
-          <img src="/images/MisaServerWithoutTextBrown.png" alt="logo" />
+          <img src="/core/images/MisaServerWithoutTextBrown.png" alt="logo" />
         </div>
         <div className="logo-title">Misa Server</div>
       </div>
