@@ -61,13 +61,13 @@ function App() {
         <AuthProvider>
           <Routes>
               <Route path="/core" element={<RouteLayout />}>
-                <Route path="/auth" element={<AuthPage />} />
+                <Route path="/core/auth" element={<AuthPage />} />
                 <Route element={<PrivateRoute />}>
-                  <Route path="/home" element={<HomePage />} />
-                  <Route path="/settings" element={"settings"} />
+                  <Route path="/core/home" element={<HomePage />} />
+                  <Route path="/core/settings" element={"settings"} />
                 </Route>
-                <Route path="/" element={<Navigate to="/home" replace />} />
-                <Route path="*" element={<Navigate to="/home" replace />} />
+                <Route path="/core" element={<Navigate to="/core/home" replace />} />
+                <Route path="*" element={<Navigate to="/core/home" replace />} />
               </Route>
           </Routes>
         </AuthProvider>
