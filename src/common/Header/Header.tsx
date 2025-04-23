@@ -29,7 +29,7 @@ export const Header = () => {
     <div className="header">
       <div className="header__logo">
         <div className="logo-icon">
-          <img src="images/MisaServerWithoutTextBrown.png" alt="logo" />
+          <img src="/images/MisaServerWithoutTextBrown.png" alt="logo" />
         </div>
         <div className="logo-title">Misa Server</div>
       </div>
