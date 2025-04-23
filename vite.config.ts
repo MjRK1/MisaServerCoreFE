@@ -21,7 +21,8 @@ export default defineConfig({
   },
   preview: {
     port: 8080,
-    host: process.env.PROD_HOST ?? "localhost"
+    host: process.env.PROD_HOST ?? "localhost",
+    allowedHosts: ['misaserver.ru']
   },
   base: '/core/',
   build: {
