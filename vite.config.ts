@@ -21,6 +21,7 @@ export default defineConfig({
   },
   preview: {
     port: 8080,
+    host: process.env.PROD_HOST ?? "localhost"
   },
   base: '/core/',
   build: {
