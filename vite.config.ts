@@ -24,7 +24,7 @@ export default defineConfig({
     host: process.env.PROD_HOST ?? "localhost",
     allowedHosts: ['misaserver.ru']
   },
-  base: '/',
+  base: '/core',
   build: {
     outDir: 'dist',
     assetsInlineLimit: 0,
