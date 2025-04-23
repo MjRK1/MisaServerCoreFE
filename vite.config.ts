@@ -19,6 +19,9 @@ export default defineConfig({
   server: {
     port: 8000
   },
+  preview: {
+    port: 8080,
+  },
   base: '/core/',
   build: {
     outDir: 'dist',

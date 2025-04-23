@@ -56,7 +56,7 @@ const AuthProvider = (
         setRefreshToken(userData.refreshToken);
         localStorage.setItem('accessToken', userData?.accessToken);
         localStorage.setItem('refreshToken', userData?.refreshToken);
-        navigate('/home');
+        navigate('/core/home');
         return data;
       }))
       .catch((err) => {
@@ -96,7 +96,7 @@ const AuthProvider = (
         setRefreshToken(null);
         localStorage.removeItem('accessToken');
         localStorage.removeItem('refreshToken');
-        navigate('/auth');
+        navigate('/core/auth');
       })
       .catch((err) => {
         messageApi.open({
@@ -116,7 +116,7 @@ const AuthProvider = (
       .catch((e)=> {
         setRefreshToken(null);
         localStorage.removeItem('refreshToken');
-        navigate('/auth');
+        navigate('/core/auth');
         return e;
       });
   };
