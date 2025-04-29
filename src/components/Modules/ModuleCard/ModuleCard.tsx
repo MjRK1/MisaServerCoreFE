@@ -32,7 +32,7 @@ export const ModuleCard = (props: IModuleCardProps) => {
         />
         <div
           className="module-card-footer__redirect-button"
-          onClick={() => navigate(`/core/modules/${module.name}`)}
+          onClick={() => navigate(`/core/modules/${module.name}/home`)}
         >
           <div className="module-card-footer__title">Перейти</div>
           <div className="module-card-redirect-button__icon">

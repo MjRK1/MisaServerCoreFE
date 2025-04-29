@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite --port 8000",
+    "start": "vite --port 8000 --strictPort",
     "dev": "vite --port 8000",
     "serve": "vite preview",
     "build": "vite build",
@@ -20,7 +20,7 @@
     "axios": "^1.8.4",
     "bcryptjs": "^3.0.2",
     "classnames": "^2.5.1",
-    "dot-env": "^0.0.1",
+    "dayjs": "^1.11.13",
     "husky": "^9.1.7",
     "motion": "^12.7.4",
     "react": "^19.0.0",
@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@module-federation/vite": "^1.2.6",
     "@types/node": "^22.14.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
@@ -47,7 +48,6 @@
     "prettier": "^3.5.3",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
-    "vite": "^6.2.0",
-    "vite-plugin-federation": "^0.0.1"
+    "vite": "^6.2.0"
   }
 }
