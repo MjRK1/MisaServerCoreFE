@@ -3,6 +3,8 @@ import react from '@vitejs/plugin-react-swc'
 import tsconfigPaths from 'vite-tsconfig-paths';
 import commonJs from "vite-plugin-commonjs";
 import { federation } from '@module-federation/vite';
+import dotenv from 'dotenv';
+dotenv.config();
 
 export default defineConfig({
   plugins: [
