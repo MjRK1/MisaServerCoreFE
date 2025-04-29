@@ -6,6 +6,14 @@ import { federation } from '@module-federation/vite';
 import dotenv from 'dotenv';
 dotenv.config();
 
+const getEntryLink = () => {
+  if (process.env.IS_PROD) {
+    return `${process.env.MISA_FILES_ENTRY_HOST}/remoteEntry.js`
+  }
+
+  return `${process.env.MISA_FILES_ENTRY_HOST}:${process.env.MISA_FILES_ENTRY_PORT}/remoteEntry.js`;
+}
+
 export default defineConfig({
   plugins: [
     tsconfigPaths(),
@@ -15,7 +23,7 @@ export default defineConfig({
       name: 'core',
       remotes: {
         misa_files: {
-          entry: `${process.env.MISA_FILES_ENTRY_HOST}:${process.env.MISA_FILES_ENTRY_PORT}/remoteEntry.js`,
+          entry: getEntryLink(),
           type: 'module',
           name: 'misa_files',
         },
