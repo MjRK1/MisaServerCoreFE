@@ -12,6 +12,8 @@ import { ModulePage } from 'pages/ModulePage';
 import { ErrorPage } from 'pages/ErrorPage';
 
 function App() {
+  console.log(import.meta.env.MODE);
+
   return (
     <ErrorBoundary>
       <ConfigProvider
@@ -69,7 +71,7 @@ function App() {
                   <Route path="/core/error" element={<ErrorPage />} />
                   <Route path="/core/home" element={<HomePage />} />
                   <Route path="/core/settings" element={"settings"} />
-                  <Route path="/core/modules" element={<ModulePage />} />
+                  <Route path="/core/modules/:moduleName/*" element={<ModulePage />} />
                 </Route>
                 <Route path="/core" element={<Navigate to="/core/auth" replace />} />
                 <Route path="*" element={<Navigate to="/core/auth" replace />} />
