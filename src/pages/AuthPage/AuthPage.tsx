@@ -21,10 +21,7 @@ export const AuthPage = () => {
         navigate('/core/home');
       })
       .catch(async (e) => {
-        if (e.name === 'AxiosError') {
-          console.log(e);
-          navigate('/core/error');
-        } else if (['TokenExpiredError', 'JsonWebTokenError'].includes(e?.response?.data?.name)) {
+        if (['TokenExpiredError', 'JsonWebTokenError'].includes(e?.response?.data?.name)) {
           if (refreshAccessToken) await refreshAccessToken(refreshToken);
         } else {
           navigate('/core/auth');
