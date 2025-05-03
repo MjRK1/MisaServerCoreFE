@@ -15,7 +15,8 @@ const initialState: IAuthState = {
   user: {
     username: null,
     displayName: null,
-    id: null
+    id: null,
+    roles: []
   }
 };
 
@@ -37,10 +38,8 @@ export const authSlice = createSlice({
           state.user.username = userData.username;
           state.user.id = userData.id;
           state.user.displayName = userData.displayName;
-          console.log(localStorage.getItem('refreshToken'));
         })
         .catch(e => {
-          console.log(e);
           return e;
         });
     },
@@ -50,7 +49,12 @@ export const authSlice = createSlice({
     },
 
     clearUser: (state) => {
-      state.user = null;
+      state.user = {
+        username: null,
+        displayName: null,
+        id: null,
+        roles: []
+      };
     },
   }
 });

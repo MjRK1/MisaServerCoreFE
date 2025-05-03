@@ -12,8 +12,6 @@ import { ModulePage } from 'pages/ModulePage';
 import { ErrorPage } from 'pages/ErrorPage';
 
 function App() {
-  console.log(import.meta.env.MODE);
-
   return (
     <ErrorBoundary>
       <ConfigProvider

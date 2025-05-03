@@ -5,6 +5,8 @@ import tsParser from '@typescript-eslint/parser';
 import tseslint from 'typescript-eslint';
 
 const config = {
+    ignores: ['dist/**/*', 'vite.config.ts', 'eslint.config.js'],
+
     plugins: {
         react: react,
         jsxA11y: jsxA11y
@@ -67,7 +69,6 @@ const config = {
         ...tseslint.configs['eslint-recommended'],
         ...react.configs.recommended.rules,
     },
-    ignores: ['eslint.config.js', 'vite.config.ts'],
     files: ['**/*.ts', '**/*.tsx'],
 
 };

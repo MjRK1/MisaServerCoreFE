@@ -1,7 +1,8 @@
 import React from 'react';
 // @ts-ignore
-import FilesApp from 'misa_files/FilesApp';
 import { useAuth } from 'hooks/AuthProvider';
+const FilesApp = React.lazy(() => import("misa_files/FilesApp"));
+
 
 export const ModulePage = () => {
   // const { moduleName } = useParams();

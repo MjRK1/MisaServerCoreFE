@@ -8,7 +8,7 @@ export const Footer = () => {
         <a
           className="footer-links__footer-item"
           href="https://github.com/MjRK1/MisaServerCoreFE/tree/develop"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <div className="footer-item__item-icon">
             <GithubOutlined />

@@ -17,7 +17,6 @@ export const PrivateRoute = () => {
       })
       .catch(async (e) => {
         if (e.response === undefined) {
-          console.log(e);
           setIsError(true);
         } else if (['TokenExpiredError', 'JsonWebTokenError'].includes(e?.response?.data?.name)) {
             if (refreshAccessToken) await refreshAccessToken(refreshToken);
