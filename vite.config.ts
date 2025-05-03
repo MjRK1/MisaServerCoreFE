@@ -20,9 +20,7 @@ export default defineConfig({
     federation({
       name: 'core',
       remotes: {
-        misa_files: `promise new Promise(resolve => {
-          resolve('${getRemoteEntry()}')
-        })`,
+        misa_files: getRemoteEntry(),
       },
       shared: ['react', 'react-dom', 'react-router-dom']
     })
