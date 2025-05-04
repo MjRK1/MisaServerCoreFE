@@ -3,5 +3,4 @@
     max-width: calc(100vw - 300px);
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
 }

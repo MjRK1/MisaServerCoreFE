@@ -1,6 +1,7 @@
 .module-card {
     display: flex;
     flex-direction: column;
+    margin-right: 30px;
     justify-content: space-between;
     background: var(--color-white1);
     color: var(--color-black4);
@@ -20,7 +21,9 @@
     font-weight: 500;
     user-select: none;
 }
-
+.module-card-header__module-card-icon .module-icon {
+    font-size: 70px;
+}
 .module-card-header__module-card-icon img {
     width: 100px;
     height: 100px;

@@ -54,31 +54,37 @@ export const HomePage = () => {
           await Promise.all(
             data.data.map(async (module) => {
             let moduleImage: string | null = null;
-            try {
-              const response = await MISA.getModuleImage({ token: accessToken, moduleName: module.name });
-              moduleImage = URL.createObjectURL(response.data);
-              return ({
-                name: module?.name,
-                enabled: module?.enabled,
-                repo: module?.repo,
-                basePath: module?.basePath,
-                link: module?.link,
-                image: moduleImage,
-              });
-            } catch (e) {
-              messageApi.open({
-                type: 'error',
-                content: "Ошибка загрузки картинки модуля",
-              });
-              return {
-                name: module?.name,
-                enabled: module?.enabled,
-                repo: module?.repo,
-                basePath: module?.basePath,
-                link: module?.link,
-                image: null,
-              };
+            if (module.img) {
+              try {
+                const response = await MISA.getModuleImage({ token: accessToken, moduleName: module.name });
+                moduleImage = URL.createObjectURL(response.data);
+                return ({
+                  name: module?.name,
+                  enabled: module?.enabled,
+                  repo: module?.repo,
+                  basePath: module?.basePath,
+                  link: module?.link,
+                  image: moduleImage,
+                  isExternal: module?.isExternal,
+                  services: {...module?.services},
+                });
+              } catch (e) {
+                messageApi.open({
+                  type: 'error',
+                  content: "Ошибка загрузки картинки модуля",
+                });
+              }
             }
+            return {
+              name: module?.name,
+              enabled: module?.enabled,
+              repo: module?.repo,
+              basePath: module?.basePath,
+              link: module?.link,
+              image: null,
+              isExternal: module?.isExternal,
+              services: {...module?.services},
+            };
           })
         );
         setModules([...newModules]);

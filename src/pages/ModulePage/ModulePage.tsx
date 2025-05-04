@@ -1,12 +1,23 @@
 import React from 'react';
-// @ts-ignore
 import { useAuth } from 'hooks/AuthProvider';
+import { useParams } from 'react-router-dom';
+// @ts-ignore
 const FilesApp = React.lazy(() => import("misa_files/FilesApp"));
 
 
 export const ModulePage = () => {
-  // const { moduleName } = useParams();
+  const { moduleName } = useParams();
   const { user, accessToken, refreshToken } = useAuth();
+
+  const MODULES_ENUM = {
+    MisaFiles: (
+      <FilesApp
+        user={user}
+        accessToken={accessToken}
+        refreshToken={refreshToken}
+      />
+    ),
+  };
 
 
   const renderModule = () => {
@@ -14,11 +25,7 @@ export const ModulePage = () => {
       return null;
     }
     return (
-      <FilesApp
-        user={user}
-        accessToken={accessToken}
-        refreshToken={refreshToken}
-      />
+      MODULES_ENUM[moduleName as string]
     );
   };
 

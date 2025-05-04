@@ -10,6 +10,8 @@ import { ConfigProvider } from 'antd';
 import { HomePage } from 'pages/HomePage';
 import { ModulePage } from 'pages/ModulePage';
 import { ErrorPage } from 'pages/ErrorPage';
+import { store } from 'services/redux/store';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
@@ -60,22 +62,24 @@ function App() {
           }
         }
       >
-        <AuthProvider>
-          <Routes>
-              <Route path="/core" element={<RouteLayout />}>
-                <Route path="/core/auth" element={<AuthPage />} />
-                <Route path="/core/error" element={<ErrorPage />} />
-                <Route element={<PrivateRoute />}>
+        <Provider store={store}>
+          <AuthProvider>
+            <Routes>
+                <Route path="/core" element={<RouteLayout />}>
+                  <Route path="/core/auth" element={<AuthPage />} />
                   <Route path="/core/error" element={<ErrorPage />} />
-                  <Route path="/core/home" element={<HomePage />} />
-                  <Route path="/core/settings" element={"settings"} />
-                  <Route path="/core/modules/:moduleName/*" element={<ModulePage />} />
+                  <Route element={<PrivateRoute />}>
+                    <Route path="/core/error" element={<ErrorPage />} />
+                    <Route path="/core/home" element={<HomePage />} />
+                    <Route path="/core/settings" element={"settings"} />
+                    <Route path="/core/modules/:moduleName/*" element={<ModulePage />} />
+                  </Route>
+                  <Route path="/core" element={<Navigate to="/core/auth" replace />} />
+                  <Route path="*" element={<Navigate to="/core/auth" replace />} />
                 </Route>
-                <Route path="/core" element={<Navigate to="/core/auth" replace />} />
-                <Route path="*" element={<Navigate to="/core/auth" replace />} />
-              </Route>
-          </Routes>
-        </AuthProvider>
+            </Routes>
+          </AuthProvider>
+        </Provider>
       </ConfigProvider>
     </ErrorBoundary>
   );

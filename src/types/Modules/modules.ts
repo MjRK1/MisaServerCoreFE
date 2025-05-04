@@ -1,3 +1,12 @@
+export interface IModuleService {
+  host: string;
+  port: string | number;
+}
+export interface IModuleServices {
+  frontend: IModuleService;
+  backend: IModuleService;
+}
+
 export interface IModule {
   name: string;
   enabled: boolean;
@@ -5,6 +14,8 @@ export interface IModule {
   basePath: string;
   link: string;
   image: string;
+  isExternal: boolean;
+  services: IModuleServices;
 }
 
 export interface IModuleCardProps {
