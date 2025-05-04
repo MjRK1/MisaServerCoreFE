@@ -20,7 +20,7 @@ function getHostname() {
 
   return {
     protocol: CURRENT_PROTOCOL,
-    hostname: `api.${CURRENT_HOSTNAME}/core/`,
+    hostname: `api.${CURRENT_HOSTNAME}/core`,
   };
 }
 export const { protocol, hostname } = getHostname();
