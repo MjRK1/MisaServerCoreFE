@@ -16,12 +16,12 @@ export const Header = () => {
       title: 'Главная',
       path: '/core/home'
     },
-    {
-      id: 2,
-      name: 'settings',
-      title: 'Настройки',
-      path: '/core/settings'
-    },
+    // {
+    //   id: 2,
+    //   name: 'settings',
+    //   title: 'Настройки',
+    //   path: '/core/settings'
+    // },
   ];
 
   return (

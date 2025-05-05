@@ -71,7 +71,7 @@ function App() {
                   <Route element={<PrivateRoute />}>
                     <Route path="/core/error" element={<ErrorPage />} />
                     <Route path="/core/home" element={<HomePage />} />
-                    <Route path="/core/settings" element={"settings"} />
+                    {/*<Route path="/core/settings" element={"settings"} />*/}
                     <Route path="/core/modules/:moduleName/*" element={<ModulePage />} />
                   </Route>
                   <Route path="/core" element={<Navigate to="/core/auth" replace />} />
